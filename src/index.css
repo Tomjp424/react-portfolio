@@ -78,6 +78,7 @@ footer {
   margin-right: 150px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-link.active {
@@ -107,7 +108,8 @@ footer {
 }
 
 .footer-container {
-  width: 10vw;
+  width: fit-content;
+  gap: 10px;
   margin-left: 20px;
   display: flex;
   justify-content: space-around;
@@ -225,4 +227,99 @@ footer {
 #resume-page ul li {
   font-weight: bold;
   font-size: 1.3em;
+}
+
+@media screen and (max-width: 1280px) {
+  .nav-link {
+    flex: 25%;
+  }
+
+  .footer-container {
+    gap: 10px;
+  }
+
+  .text-header {
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (max-width: 832px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #my-name {
+    margin-left: 0px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  .about-me-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .about-me-text {
+    font-size: 1.5em;
+  }
+
+  .portfolio-image {
+    width: 400px;
+    height: 200px;
+}
+
+#resume-page h2 {
+  text-align: center;
+}
+}
+
+@media screen and (max-width: 640px) {
+  .input-field input {
+    width: 300px;
+  }
+
+  .input-field textarea {
+    width: 300px;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  #my-name {
+    text-align: center;
+  }
+
+  .about-me-container {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .about-me-container h1 {
+    text-align: center;
+  }
+
+  .portfolio-link-text {
+    font-size: 1.3em;
+  }
+
+  .portfolio-image {
+    width: 200px;
+    height: 100px;
+}
+
+.input-field input {
+  width: 200px;
+}
+
+.input-field textarea {
+  width: 200px;
+}
 }
